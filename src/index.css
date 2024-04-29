@@ -34,6 +34,19 @@ body {
 	border-radius: 1rem;
 	padding: 2rem;
 	text-align: center;
+	position: relative;
+}
+
+.book .number-book {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(234, 6, 6, 0.612);
+	padding: 2px 8px;
+	border-top-left-radius: 0.75rem;
+	border-bottom-right-radius: 0.75rem;
+	color: #fff;
+	font-weight: 500;
 }
 
 .book h2 {

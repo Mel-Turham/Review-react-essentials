@@ -24,21 +24,33 @@ const App = () => {
 	// };
 
 	return (
-		<section className='booklist'>
-			{/* <ExempleEvent /> */}
-			{books.map((book, index) => (
-				<Book
-					key={index + 1}
-					// img={book.img}
-					// title={book.title}
-					// alt={book.alt}
-					// author={book.author}
-					// book={book}
-					{...book}
-					// getBook={() => getBook(book.id)}
-				/>
-			))}
-		</section>
+		<>
+			<h1
+				style={{
+					textAlign: 'center',
+					marginTop: '2rem',
+					textTransform: 'uppercase',
+				}}
+			>
+				Best seller cars
+			</h1>
+			<section className='booklist'>
+				{/* <ExempleEvent /> */}
+				{books.map((book, index) => (
+					<Book
+						key={index + 1}
+						// img={book.img}
+						// title={book.title}
+						// alt={book.alt}
+						// author={book.author}
+						// book={book}
+						{...book}
+						number={index + 1}
+						// getBook={() => getBook(book.id)}
+					/>
+				))}
+			</section>
+		</>
 	);
 };
 // Exemple event in react js (onChange and Onclick)
