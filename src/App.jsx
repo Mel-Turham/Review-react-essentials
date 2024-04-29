@@ -1,19 +1,5 @@
-const books = [
-	{
-		id: 1,
-		author: 'Mel turham',
-		title: 'Tesla Model X',
-		img: '../src/assets/images/Mega-Menu-Vehicles-Model-X.png',
-		alt: 'tesla image model X',
-	},
-	{
-		id: 2,
-		author: 'Houthou william',
-		title: 'Tesla Model S',
-		img: '../src/assets/images/Mega-Menu-Vehicles-Model-S.png',
-		alt: 'tesla image model S',
-	},
-];
+import books from './books';
+import Book from './Book';
 
 // const firstBook = {
 // 	author: 'Mel turham',
@@ -29,11 +15,14 @@ const books = [
 // 	alt: 'tesla image model S',
 // };
 const App = () => {
-	const getBook = (id) => {
-		const book = books.find((book) => book.id === id);
+	// Fonction qui recuper un item qui marche avec l'id passer en parrametre
 
-		console.log(book);
-	};
+	// const getBook = (id) => {
+	// 	const book = books.find((book) => book.id === id);
+
+	// 	console.log(book);
+	// };
+
 	return (
 		<section className='booklist'>
 			{/* <ExempleEvent /> */}
@@ -46,7 +35,7 @@ const App = () => {
 					// author={book.author}
 					// book={book}
 					{...book}
-					getBook={() => getBook(book.id)}
+					// getBook={() => getBook(book.id)}
 				/>
 			))}
 		</section>
@@ -84,20 +73,5 @@ const App = () => {
 // 		</section>
 // 	);
 // };
-
-const Book = (props) => {
-	const { id, img, title, alt, author, children, getBook } = props;
-	// const { img, title, alt, author, children } = props.book;
-
-	return (
-		<article className='book'>
-			<img src={img} alt={alt} />
-			<h2>{title}</h2>
-			<h4>{author.toUpperCase()}</h4>
-			<button onClick={getBook}>Display Book</button>
-			{children}
-		</article>
-	);
-};
 
 export default App;
