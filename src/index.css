@@ -35,6 +35,12 @@ body {
 	padding: 2rem;
 	text-align: center;
 	position: relative;
+	box-shadow: 0 0 70px #ccc;
+	cursor: pointer;
+	transition: all 400ms ease-in-out;
+}
+.book:hover {
+	transform: translateY(-0.313rem);
 }
 
 .book .number-book {

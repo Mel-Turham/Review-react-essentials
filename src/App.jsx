@@ -28,8 +28,8 @@ const App = () => {
 			<h1
 				style={{
 					textAlign: 'center',
-					marginTop: '2rem',
-					textTransform: 'uppercase',
+					marginTop: '4rem',
+					textTransform: 'capitalize',
 				}}
 			>
 				Best seller cars
